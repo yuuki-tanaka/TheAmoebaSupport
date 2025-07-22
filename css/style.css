@@ -261,7 +261,6 @@ td.Menu_Picture_Area.menu_cursor_sender:hover img {
 div.theamoebasupport-shortcut-menu-item {
   display: inline-block;
   border-radius: 50px;
-  padding: 4px 10px 4px 10px;
   margin: 2px 5px 2px 5px;
   transition: background-color .4s;
   cursor: pointer;
@@ -276,6 +275,8 @@ div.theamoebasupport-shortcut-menu-item:hover {
 .theamoebasupport-shortcut-menu-item a:visited,
 .theamoebasupport-shortcut-menu-item a:hover,
 .theamoebasupport-shortcut-menu-item a:active {
+  display: block;
+  padding: 4px 10px 4px 10px;
   font-family: sans-serif;
   color: #337ab7;
   text-decoration: none;
