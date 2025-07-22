@@ -97,9 +97,11 @@ observer.observe(document.body, { childList: true, subtree: true });
 
 // ホームメニュー画面でタイルの中心のアイコンだけではなく、タイル全体をクリックできるようにする。
 $(document).on('click', 'td.Menu_Picture_Area.menu_cursor_sender', function () {
-    var elem = $(this).find('a.Common_Menu_Class')[0];
-    if (elem) {
-        elem.click();
+    if (!$(this).is('a')) {
+        var elem = $(this).find('a.Common_Menu_Class');
+        if (elem.length > 0) {
+            elem[0].click();
+        }
     }
 });
 
