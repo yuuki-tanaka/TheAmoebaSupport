@@ -104,7 +104,7 @@ const createDirectWorkScreenBtn = (loginBtn, theAmoebaSupportSetting) => {
 }
 
 /**
- * 画面用見込み時
+ * 画面読み込み時
  * @returns 
  */
 window.onload = async () => {
