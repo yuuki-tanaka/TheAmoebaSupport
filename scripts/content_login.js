@@ -80,8 +80,8 @@ const createDirectWorkScreenBtn = (loginBtn, theAmoebaSupportSetting) => {
         setParam("actionbean", "GetList");
         setParam("mode", "search");
         setParam("listsize", -1);
-        setParam("ORG_CD_KEY", theAmoebaSupportSetting.choice_direct_work_screen_setting.team_id); //13G66600
-        setParam("ORG_NA_KEY", theAmoebaSupportSetting.choice_direct_work_screen_setting.team_name); // 開発ｲﾉﾍﾞｰｼｮﾝ1B
+        setParam("ORG_CD_KEY", theAmoebaSupportSetting.choice_direct_work_screen_setting.team_id);
+        setParam("ORG_NA_KEY", theAmoebaSupportSetting.choice_direct_work_screen_setting.team_name);
         setParam("ORG_CD_CONDITION", theAmoebaSupportSetting.choice_direct_work_screen_setting.team_id);
         setParam("ORG_NA_CONDITION", theAmoebaSupportSetting.choice_direct_work_screen_setting.team_name);
         setParam("Target_DT_Temp", targetDate);
