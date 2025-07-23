@@ -13,6 +13,7 @@ $(function () {
   $('#choice_shortcut_menu').prop('checked', false);
   $('#choice_performer_history').prop('checked', false);
   $('#choice_enter_search').prop('checked', false);
+  $('#choice_direct_work_screen').prop('checked', false);
 
   // オプション画面の初期値を設定する
   chrome.storage.local.get("the_amoeba_support_setting", function (value) {
@@ -32,6 +33,15 @@ $(function () {
 
       if (d.choice_enter_search) {
         $('#choice_enter_search').prop('checked', true);
+      }
+
+      if (d.choice_direct_work_screen) {
+        $('#choice_direct_work_screen').prop('checked', true);
+      }
+
+      if (d.choice_direct_work_screen_setting) {
+        $('#direct-work-screen-team-id').val(d.choice_direct_work_screen_setting.team_id);
+        $('#direct-work-screen-team-name').val(d.choice_direct_work_screen_setting.team_name);
       }
 
       if (d.shortcut_menu_list) {
@@ -74,6 +84,12 @@ $(document).on("click", "#save", function () {
     data.choice_enter_search = true;
   } else {
     data.choice_enter_search = false;
+  }
+
+  data.choice_direct_work_screen = $('#choice_direct_work_screen').is(':checked');
+  data.choice_direct_work_screen_setting = {
+    team_id: $('#direct-work-screen-team-id').val(),
+    team_name: $('#direct-work-screen-team-name').val()
   }
 
   data.shortcut_menu_list = [];
